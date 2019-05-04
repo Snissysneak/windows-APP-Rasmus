@@ -2,16 +2,31 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>0 Gold</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="Javascript/javascript.js"></script>
   </head>
   <body>
 
-    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <div id="clickerupgrades">
 
+    </div>
+
+    <div id="autoupgrades">
+
+    </div>
+
+    <div id="wrapper">
+      <div id="clickercontainer">
+        <a href="#" onclick="add()"><img id="clicker" src="img/Clicker.png"></a>
+        <input type="text" id="score" disabled>
+      </div>
+    </div>
 
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
+
   </body>
 </html>
