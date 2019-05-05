@@ -7,20 +7,32 @@ body {
   background-color: #C082FF;
 }
 
-#clickercontainer, #clickerupgrades, #autoupgrades {
+#clickercontainer, #clickerupgrades, #autoupgrades, #currentupgrades {
   margin-left: 2%;
 }
 
-/*Clicker Container*/
 #wrapper {
   text-align: center;
 }
 
-#clickercontainer {
+.headers {
+  margin-top: 4%;
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid #07E877;
+  color: white;
+  -webkit-box-shadow: 0px 6px 5px -3px rgba(0,69,33,1);
+  -moz-box-shadow: 0px 6px 5px -3px rgba(0,69,33,1);
+  box-shadow: 0px 6px 5px -3px rgba(0,69,33,1);
+}
+
+/*Clicker Container*/
+#clickercontainer, #currentupgrades {
+  text-align: center;
   display: inline-block;
   width: 30%;
   height: 33vh;
-  margin-top: 10%;
+  margin-top: 3%;
   border: 4px solid #07E877;
   border-radius: 20px;
   background-color: #268054;
@@ -29,14 +41,36 @@ body {
 #clicker {
   float: left;
   margin-top: 3%;
-  width: 300px;
+  margin-left: 2%;
+  width: 50%;
+  border-radius: 50%;
+  animation: rotation 15s infinite linear;
 }
 
-#score {
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#currentwaifus, #totalspent {
+  margin-top: 10%;
+  margin-right: 3%;
+  text-align: center;
+  color: white;
+}
+
+#totalspent {
+  margin-top: 15%;
+}
+
+#score, #spent {
   float: right;
   text-align: center;
   font-size: 140%;
-  margin-top: 3%;
   margin-right: 10%;
   width: 30%;
   height: 15%;
@@ -46,11 +80,13 @@ body {
   color: white;
 }
 
+
+
 /*Clicker Upgrades*/
 #clickerupgrades {
   float: left;
   width: 30%;
-  height: 66vh;
+  height: 72vh;
   margin-top: 3%;
   border: 4px solid #07E877;
   border-radius: 20px;
@@ -61,10 +97,13 @@ body {
 #autoupgrades {
   float: right;
   width: 30%;
-  height: 66vh;
+  height: 72vh;
   margin-top: 3%;
   margin-right: 2%;
   border: 4px solid #07E877;
   border-radius: 20px;
   background-color: #268054;
 }
+
+
+/*test*/
