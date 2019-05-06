@@ -3,13 +3,8 @@
   padding: 0;
 }
 
-body {
-  background-color: #000000;
-}
-
 #clickercontainer, #clickerupgrades, #autoupgrades, #currentupgrades {
   margin-left: 2%;
-  overflow: scroll;
 }
 #wrapper {
   text-align: center;
@@ -26,8 +21,14 @@ body {
   box-shadow: 0px 6px 5px -3px rgba(0,69,33,1);
 }
 
+.headertext {
+  margin-bottom: 2.5%;
+}
+
 .subheaders {
-  margin-top: 15%;
+  margin-top: 1.5%;
+  float: left;
+  height: 9vh;
   width: 100%;
   border-bottom: 4px solid #FF00E4;
   color: white;
@@ -37,9 +38,36 @@ body {
 }
 
 .upgrade {
-  width: 50%;
-  border: 2px solid black;
+  width: 15%;
+  float: left;
+  margin-left: 2%;
+  margin-bottom: 1%;
   border-radius: 50%;
+  border: 3px solid #FF00E4;
+}
+
+.upgradetext {
+  float: left;
+  margin-left: 3%;
+}
+
+.upgradeinfo {
+  position: absolute;
+  float: left;
+  margin-left: 19%;
+}
+
+.upgradeprice {
+  position: absolute;
+  margin-top: 3%;
+  margin-left: 6.5%;
+}
+
+.upgradeinfotext {
+  position: absolute;
+  float: left;
+  margin-top: 3.1%;
+  margin-left: 19%;
 }
 
 /*Clicker Container*/
@@ -52,24 +80,22 @@ body {
   border: 4px solid #FF00E4;
   border-radius: 20px;
   background-color: #880DFF;
+  opacity: 0.9;
+}
+
+#waifu{
+  position: absolute;
+  margin-left: 1%;
+  margin-top: 2%;
+  width: 15%;
+  border-radius: 50%;
 }
 
 #clicker {
   float: left;
-  margin-top: 6%;
-  margin-left: 2%;
-  width: 50%;
+  width: 100%;
   border-radius: 50%;
   animation: rotation 15s infinite linear;
-}
-
-.make-bigger{
-  animation: make_bigger 0.1s 1;
-}
-
-@keyframes make_bigger {
-  from { width: 30%; }
-  to { width: 31%; }
 }
 
 @keyframes rotation {
@@ -81,17 +107,21 @@ body {
   }
 }
 
+.make-bigger{
+  animation: make_bigger 0.1s 1;
+}
+
+@keyframes make_bigger {
+  from { width: 15%; }
+  to { width: 16%; }
+}
+
 #currentwaifus, #totalspent, #totalclicks {
   margin-top: 3%;
   margin-right: 3%;
   margin-left: 290px;
   text-align: center;
   color: white;
-}
-
-#waifu{
-  position: absolute;
-  width: 30%;
 }
 
 #totalspent, #totalclicks {
@@ -122,6 +152,11 @@ body {
   border: 4px solid #FF00E4;
   border-radius: 20px;
   background-color: #880DFF;
+  opacity: 0.9;
+}
+
+#hide {
+  display: none;
 }
 
 /*Auto Clicker Upgrades*/
@@ -133,12 +168,11 @@ body {
   margin-right: 2%;
   border: 4px solid #FF00E4 ;
   border-radius: 20px;
-  background-color: #880DFF   ;
+  background-color: #880DFF;
+  opacity: 0.9;
 }
 
-
 /*test*/
-
 #exit{
   float: left;
   position: absolute;
