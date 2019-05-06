@@ -39,7 +39,7 @@ function add() {
   money();
 
   document.getElementById("clicks").value = totalclicks + " Clicks";
-  
+
   var waifu = document.getElementById("waifu");
   waifu.classList.remove('make-bigger');
   void waifu.offsetWidth;
@@ -144,11 +144,4 @@ function clickerboost() {
 
     onstartup();
   }
-}
-
-//exit system no work
-function exit() {
-  exit.addEventListener('click', function() {
-    window.close();
-  });
 }
