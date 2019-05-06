@@ -7,8 +7,8 @@ var totalwaifuspent = 0
 //money system
 function add() {
   total = total + a
-  document.getElementById("score").value = total + " Waifu's";
-  document.title = total + " Waifu's";
+    document.getElementById("score").value = total + " Waifu's";
+    document.title = total + " Waifu's";
 }
 
 function spent() {
