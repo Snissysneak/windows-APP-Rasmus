@@ -39,13 +39,10 @@ function add() {
   money();
 
   document.getElementById("clicks").value = totalclicks + " Clicks";
-
+  
   var waifu = document.getElementById("waifu");
-
   waifu.classList.remove('make-bigger');
-
   void waifu.offsetWidth;
-
   waifu.classList.add('make-bigger');
 }
 
