@@ -8,18 +8,24 @@
   </head>
   <body>
 
-    <div id="exit"><h1>Exit</h1></div>
+    <div id="exit"><h1 onclick="exit()">Exit</h1></div>
 
     <div id="clickerupgrades">
       <div class="headers">
         <h1 class="headertext">Click Upgrades</h1>
       </div>
+      <div class="subheaders">
+        <img class="upgrade" src="" alt="#">
+      </div>
+
     </div>
 
     <div id="autoupgrades">
       <div class="headers">
         <h1 class="headertext">Auto Upgrades</h1>
       </div>
+
+
     </div>
 
     <div id="wrapper">
@@ -30,6 +36,9 @@
 
         <h2 id="totalspent">Total Spent</h2>
         <input type="text" id="spent" disabled>
+
+        <h2 id="totalclicks">Total Clicks</h2>
+        <input type="text" id="clicks" disabled>
       </div>
     </div>
 
@@ -44,14 +53,6 @@
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
-    </script>
-
-    <script>
-      var exit = document.getElementById('exit');
-
-      exit.addEventListener('click', function() {
-        window.close();
-      });
     </script>
   </body>
 </html>
