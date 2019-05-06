@@ -50,10 +50,11 @@ body {
 .make-bigger{
   animation: make_bigger 0.1s 1;
 }
+
 @keyframes make_bigger {
   from { width: 30%; }
   to { width: 31%; }
-} 
+}
 
 @keyframes rotation {
   from {
@@ -124,7 +125,7 @@ body {
 #exit{
   margin-top: 1%;
   margin-left: 2.5%;
-  
+
 }
 #exit h1{
   color: #FF00E4;
