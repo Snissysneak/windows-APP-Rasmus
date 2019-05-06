@@ -11,6 +11,7 @@ function createWindow () {
     fullscreen: true,
     resizable: false,
     frame: false,
+    fullscreenWindowTitle: true,
     webPreferences: {
       nodeIntegration: true
     }
