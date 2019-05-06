@@ -10,7 +10,6 @@ body {
 #clickercontainer, #clickerupgrades, #autoupgrades, #currentupgrades {
   margin-left: 2%;
 }
-
 #wrapper {
   text-align: center;
 }
@@ -122,6 +121,8 @@ body {
 /*test*/
 
 #exit{
+  float: left;
+  position: absolute;
   margin-top: 1%;
   margin-left: 2.5%;
   
@@ -132,4 +133,5 @@ body {
 }
 #exit h1:hover{
   cursor: pointer;
+  color: red;
 }
