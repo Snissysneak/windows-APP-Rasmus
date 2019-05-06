@@ -47,6 +47,14 @@ body {
   animation: rotation 15s infinite linear;
 }
 
+.make-bigger{
+  animation: make_bigger 0.1s 1;
+}
+@keyframes make_bigger {
+  from { width: 30%; }
+  to { width: 31%; }
+} 
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -59,10 +67,15 @@ body {
 #currentwaifus, #totalspent {
   margin-top: 10%;
   margin-right: 3%;
+  margin-left: 290px;
   text-align: center;
   color: white;
 }
 
+#waifu{
+  position: absolute;
+  width: 30%;
+}
 #totalspent {
   margin-top: 15%;
 }
@@ -107,3 +120,16 @@ body {
 
 
 /*test*/
+
+#exit{
+  margin-top: 1%;
+  margin-left: 2.5%;
+  
+}
+#exit h1{
+  color: #FF00E4;
+  font-weight: 1px;
+}
+#exit h1:hover{
+  cursor: pointer;
+}
