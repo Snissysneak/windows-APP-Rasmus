@@ -10,9 +10,10 @@ var totalwaifuspent = 0
 var boostprice = 100
 
 //auto Upgrades
-var pillowcoverpris = 10
+var pillowcoverpris = 15
+var coverpris = 15
 var autopillow = 0
-var dps
+var dps = 0
 
 //onetime upgardes
 var upgradeoneköpt = 0
@@ -21,11 +22,12 @@ var upgradeoneköpt = 0
 function onstartup() {
   money();
   document.getElementById("clicks").value = totalclicks + " Clicks";
-  document.getElementById("spent").value = totalwaifuspent + " Waifu's";
+  num = totalwaifuspent.toFixed(0);
+  document.getElementById("spent").value = num + " Waifu's";
   document.getElementById("clickerboostprice").innerHTML = "Price: " + boostprice + " Waifu's";
   document.getElementById("boostinfo").innerHTML = "Next Click: " + a*2;
   document.getElementById("pillowcoverprice").innerHTML = "Price: " + coverpris + " Waifu's";
-  document.getElementById("coverinfo").innerHTML = dps;
+  document.getElementById("coverinfo").innerHTML = "Owned: " + dps;
 }
 
 //add money system
@@ -56,7 +58,9 @@ function add() {
 
 function money() {
   if (total < 1000) {
-    document.getElementById("score").value = total + " Waifu's";
+    num = total.toFixed(0)
+
+    document.getElementById("score").value = num + " Waifu's";
   }
 
   else if (total >= 10**3 && total < 10**6) {
@@ -145,12 +149,14 @@ function money() {
   }
 }
 
-//update
+//update auto clickers  aldeles för mycket i sec
 function update() {
-  auto = autopillow;
   total += auto;
+
   onstartup();
-},
+
+  var t=setInterval(update,1000);
+}
 
 //cicker upgrades
 function clickerboost() {
@@ -181,12 +187,15 @@ function clickupgradeone() {
 function pillowcover() {
   if (total >= pillowcoverpris) {
     total = total - pillowcoverpris;
-    autopillow = autopillow + 1;
+    auto = autopillow + 0.1;
     totalwaifuspent = totalwaifuspent + pillowcoverpris;
 
-    pillowcoverpris = pillowcoverpris * 1.1;
-    coverpris = pillowcoverpris.toFixed(1);
+    dps += 1;
 
+    pillowcoverpris = pillowcoverpris * 1,15**dps;
+    coverpris = pillowcoverpris.toFixed(0);
+
+    update();
     onstartup();
   }
 }
