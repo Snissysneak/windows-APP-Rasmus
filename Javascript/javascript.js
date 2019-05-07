@@ -1,23 +1,31 @@
-var exit = document.getElementById('exit');
-
 //money & clicks
 var total = 0
 var totalclicks = 0
-var a = 1
+var a = 10
 
 //spent
 var totalwaifuspent = 0
 
-//Upgrades
+//clicker Upgrades
 var boostprice = 100
+
+//auto Upgrades
+var pillowcoverpris = 10
+var autopillow = 0
+var dps
+
+//onetime upgardes
+var upgradeoneköpt = 0
 
 //onload
 function onstartup() {
   money();
   document.getElementById("clicks").value = totalclicks + " Clicks";
-  document.getElementById("spent").value = totalwaifuspent + " Waifu's"
-  document.getElementById("clickerboostprice").innerHTML = "Price " + boostprice + " Waifu's"
-  document.getElementById("boostinfo").innerHTML = "Next Click: " + a*2
+  document.getElementById("spent").value = totalwaifuspent + " Waifu's";
+  document.getElementById("clickerboostprice").innerHTML = "Price: " + boostprice + " Waifu's";
+  document.getElementById("boostinfo").innerHTML = "Next Click: " + a*2;
+  document.getElementById("pillowcoverprice").innerHTML = "Price: " + coverpris + " Waifu's";
+  document.getElementById("coverinfo").innerHTML = dps;
 }
 
 //add money system
@@ -128,19 +136,56 @@ function money() {
     document.getElementById("score").value = totalDc + "Dc" + " Waifu's";
   }
 
-  if (total > 1000) {
-    document.getElementById("hide").style.display = "block";
+  if (upgradeoneköpt == 0) {
+    if (total >= 1000) {
+      document.getElementById("hide").style.display = "block";
+
+      upgradeoneköpt = upgradeoneköpt + 1;
+    }
   }
 }
 
-//Buy system
-function clickerboost() {
+//update
+function update() {
+  auto = autopillow;
+  total += auto;
+  onstartup();
+},
 
+//cicker upgrades
+function clickerboost() {
   if (total >= boostprice) {
-    total = total - boostprice
-    totalwaifuspent = totalwaifuspent + boostprice
-    boostprice = boostprice * 15
-    a = a * 2
+    total = total - boostprice;
+    totalwaifuspent = totalwaifuspent + boostprice;
+    boostprice = boostprice * 15;
+    a = a * 2;
+
+    onstartup();
+  }
+}
+
+function clickupgradeone() {
+  var upgradeone = 5000;
+
+  if (total >= upgradeone) {
+    total = total - upgradeone;
+    totalwaifuspent = totalwaifuspent + upgradeone;
+    a = a + 3;
+
+    document.getElementById("hide").style.display = "none";
+    onstartup();
+  }
+}
+
+//auto Upgrades
+function pillowcover() {
+  if (total >= pillowcoverpris) {
+    total = total - pillowcoverpris;
+    autopillow = autopillow + 1;
+    totalwaifuspent = totalwaifuspent + pillowcoverpris;
+
+    pillowcoverpris = pillowcoverpris * 1.1;
+    coverpris = pillowcoverpris.toFixed(1);
 
     onstartup();
   }

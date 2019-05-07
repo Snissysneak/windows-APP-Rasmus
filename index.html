@@ -23,12 +23,12 @@
         <p class="upgradeinfotext" id="boostinfo"></p>
       </div></a>
 
-      <a href="#" onclick="" id="hide"><div class="subheaders">
-        <img class="upgrade" src="img/clickupgrade.png" alt="#">
+      <a href="#" onclick="clickupgradeone()" id="hide"><div class="subheaders">
+        <img class="upgrade" src="img/clickupgradeone.png" alt="#">
         <h2 class="upgradetext">ClickUpgrade I</h2>
         <h2 class="upgradeinfo">Information</h2>
         <h3 class="upgradeprice" id="clickerboostprice">Price: 5000 Waifu's</h3>
-        <p class="upgradeinfotext" id="boostinfo"></p>
+        <p class="upgradeinfotext" id="boostinfo">Click +3</p>
       </div></a>
 
     </div>
@@ -38,7 +38,7 @@
         <h1 class="headertext">Auto Upgrades</h1>
       </div>
 
-      <a href="#" onclick=""><div class="subheaders">
+      <a href="#" onclick="pillowcover()"><div class="subheaders">
         <img class="upgrade" src="img/clickupgrade.png" alt="#">
         <h2 class="upgradetext">Pillow Cover</h2>
         <h2 class="upgradeinfo">Information</h2>
@@ -76,6 +76,8 @@
 
     <script>
       function exit() {
+        var exit = document.getElementById('exit');
+
         exit.addEventListener('click', function() {
           window.close();
         });
