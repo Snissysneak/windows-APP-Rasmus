@@ -250,11 +250,10 @@ function bodypillow() {
 
 function test() {
   var not = document.getElementsByClassName("img");
-  var not1 = -1
-  var indexooo = "z-index"
+  var not1 = -1;
 
   for (var i = 0; i < not.length; i++) {
-    not[i].style.indexooo = not1;
-    not1 -= 1
+    not[i].style.zIndex = not1;
+    not1 -= 1;
   }
 }
