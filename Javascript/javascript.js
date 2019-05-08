@@ -1,7 +1,8 @@
 //money & clicks
 var total = 0
 var totalclicks = 0
-var a = 10
+var auto = 0
+var a = 1
 
 //spent
 var totalwaifuspent = 0
@@ -12,22 +13,39 @@ var boostprice = 100
 //auto Upgrades
 var pillowcoverpris = 15
 var coverpris = 15
-var autopillow = 0
-var dps = 0
+var ownedcover = 0
+
+var pillowpris = 100
+var starpillowpris = 100
+var ownedpillow = 0
+
+var bodypillowpris = 1100
+var startbodypillowpris = 1100
+var ownedbodypillow = 0
 
 //onetime upgardes
 var upgradeoneköpt = 0
 
 //onload
 function onstartup() {
-  money();
+  //main click values
   document.getElementById("clicks").value = totalclicks + " Clicks";
   num = totalwaifuspent.toFixed(0);
   document.getElementById("spent").value = num + " Waifu's";
+
+  //click upgrades
   document.getElementById("clickerboostprice").innerHTML = "Price: " + boostprice + " Waifu's";
   document.getElementById("boostinfo").innerHTML = "Next Click: " + a*2;
+
+  //auto upgrades
   document.getElementById("pillowcoverprice").innerHTML = "Price: " + coverpris + " Waifu's";
-  document.getElementById("coverinfo").innerHTML = "Owned: " + dps;
+  document.getElementById("coverinfo").innerHTML = "owned: " + ownedcover;
+
+  document.getElementById("pillowprice").innerHTML = "Price: " + starpillowpris + " Waifu's";
+  document.getElementById("pillowinfo").innerHTML = "owned: " + ownedpillow;
+
+  document.getElementById("bodypillowprice").innerHTML = "Price: " + startbodypillowpris + " Waifu's";
+  document.getElementById("bodypillowinfo").innerHTML = "owned: " + ownedbodypillow;
 }
 
 //add money system
@@ -141,7 +159,7 @@ function money() {
   }
 
   if (upgradeoneköpt == 0) {
-    if (total >= 1000) {
+    if (ownedcover >= 10) {
       document.getElementById("hide").style.display = "block";
 
       upgradeoneköpt = upgradeoneköpt + 1;
@@ -149,20 +167,20 @@ function money() {
   }
 }
 
-//update auto clickers  aldeles för mycket i sec
+//update auto clickers
 function update() {
   total += auto;
 
-  onstartup();
+  money();
 
-  var t=setInterval(update,1000);
+  setTimeout(update,1000);
 }
 
 //cicker upgrades
 function clickerboost() {
   if (total >= boostprice) {
     total = total - boostprice;
-    totalwaifuspent = totalwaifuspent + boostprice;
+    totalwaifuspent += boostprice;
     boostprice = boostprice * 15;
     a = a * 2;
 
@@ -175,7 +193,7 @@ function clickupgradeone() {
 
   if (total >= upgradeone) {
     total = total - upgradeone;
-    totalwaifuspent = totalwaifuspent + upgradeone;
+    totalwaifuspent +=upgradeone;
     a = a + 3;
 
     document.getElementById("hide").style.display = "none";
@@ -187,15 +205,44 @@ function clickupgradeone() {
 function pillowcover() {
   if (total >= pillowcoverpris) {
     total = total - pillowcoverpris;
-    auto = autopillow + 0.1;
     totalwaifuspent = totalwaifuspent + pillowcoverpris;
+    ownedcover += 1;
+    auto += 0.1;
 
-    dps += 1;
-
-    pillowcoverpris = pillowcoverpris * 1,15**dps;
+    pillowcoverpris = 15 * 1.15**ownedcover;
     coverpris = pillowcoverpris.toFixed(0);
 
-    update();
+    money();
+    onstartup();
+  }
+}
+
+function autopillow() {
+  if (total >= pillowpris) {
+    total = total - pillowpris;
+    totalwaifuspent = totalwaifuspent + pillowpris;
+    ownedpillow += 1;
+    auto += 1;
+
+    pillowpris = 100 * 1.15**ownedpillow;
+    startpillowpris = pillowpris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function bodypillow() {
+  if (total >= bodypillowpris) {
+    total -= bodypillowpris;
+    totalwaifuspent += bodypillowpris;
+    ownedbodypillow += 1;
+    auto += 8;
+
+    bodypillowpris = 1100 * 1.15**ownedbodypillow;
+    startbodypillowpris = bodypillowpris.toFixed(0);
+
+    money();
     onstartup();
   }
 }
