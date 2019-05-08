@@ -172,6 +172,7 @@ function update() {
   total += auto;
 
   money();
+  test();
 
   setTimeout(update,1000);
 }
@@ -244,5 +245,16 @@ function bodypillow() {
 
     money();
     onstartup();
+  }
+}
+
+function test() {
+  var not = document.getElementsByClassName("img");
+  var not1 = -1
+  var indexooo = "z-index"
+
+  for (var i = 0; i < not.length; i++) {
+    not[i].style.indexooo = not1;
+    not1 -= 1
   }
 }
