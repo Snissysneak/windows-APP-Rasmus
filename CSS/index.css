@@ -230,12 +230,8 @@
 
 .img:hover{
   display: block;
-  z-index: 1;
 }
 
-.img:hover+#test1 {
-  z-index: -2;
-}
 
 .testtext {
   margin-left: 24%;
