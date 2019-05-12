@@ -8,6 +8,7 @@
 }
 #wrapper {
   text-align: center;
+  z-index: -1;
 }
 
 .headers {
@@ -25,8 +26,9 @@
   margin-bottom: 2.5%;
 }
 
-.subheaders {
+.subheaderslong {
   margin-top: 1.5%;
+  padding-bottom: 1%;
   float: left;
   height: 9vh;
   width: 100%;
@@ -37,8 +39,49 @@
   box-shadow: 0px 6px 5px -3px rgba(0,69,33,1);
 }
 
-.upgrade {
+.upgradelong {
   width: 15%;
+  float: left;
+  margin-left: 3.5%;
+  margin-bottom: 1%;
+  border-radius: 50%;
+  border: 3px solid #FF00E4;
+}
+
+.upgradetextlong {
+  float: left;
+  margin-left: 3%;
+}
+
+.upgradeinfolong {
+  position: absolute;
+  margin-left: 19%;
+}
+
+.upgradepricelong {
+  position: absolute;
+  margin-top: 3%;
+  margin-left: 6.5%;
+}
+
+.upgradeinfotextlong {
+  position: absolute;
+  float: left;
+  margin-top: 3.1%;
+  margin-left: 19%;
+}
+
+.subheaders {
+  margin-top: 1.5%;
+  margin-left: 3.5%;
+  float: left;
+  height: 9vh;
+  width: 15%;
+  color: white;
+}
+
+.upgrade {
+  width: 100%;
   float: left;
   margin-left: 2%;
   margin-bottom: 1%;
@@ -46,28 +89,52 @@
   border: 3px solid #FF00E4;
 }
 
+.upgrade:hover+.hoverinfo {
+  display: block;
+  z-index: 0;
+}
+
+.hoverinfo {
+  position: absolute;
+  background-color: black;
+  opacity: 0.9;
+  margin-left: 2.5%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: none;
+  width: 9%;
+  height: 8.7vh;
+  background: #920C74;
+  background:
+    radial-gradient(circle 20px at -1.2% 47%,transparent,transparent 50px,#920C74 50px),
+    radial-gradient(circle 20px at 120% 50%,transparent,transparent 0px,#920C74 0px);
+  background-size:200px 100px, 0px 0px;
+  background-position:0 0,50% 0;
+  background-repeat:no-repeat;
+  border: 2px solid black;
+}
+
+.hoverinfo:hover {
+  display: block;
+  z-index: 1;
+}
+
 .upgradetext {
-  float: left;
-  margin-left: 3%;
+  margin-left: 27%;
 }
 
 .upgradeinfo {
-  position: absolute;
-  float: left;
-  margin-left: 19%;
+  margin-top: 4%;
+  margin-left: 32.5%;
 }
 
 .upgradeprice {
-  position: absolute;
-  margin-top: 3%;
-  margin-left: 6.5%;
+  margin-top: 5%;
+  margin-left: 33%;
 }
 
 .upgradeinfotext {
-  position: absolute;
-  float: left;
-  margin-top: 3.1%;
-  margin-left: 19%;
+  margin-left: 29%;
 }
 
 /*Clicker Container*/
@@ -172,7 +239,7 @@
   opacity: 0.9;
 }
 
-/*test*/
+/*menu buttons*/
 #exit{
   float: left;
   position: absolute;
@@ -189,64 +256,4 @@
   color: red;
 }
 
-
-
-.img {
-  width: 100%;
-  float: left;
-  margin-left: 2%;
-  margin-bottom: 1%;
-  border-radius: 50%;
-  border: 3px solid #FF00E4;
-  z-index: -30;
-}
-
-.test {
-  margin-top: 1.5%;
-  margin-left: 1.5%;
-  float: left;
-  height: 9vh;
-  width: 15%;
-  color: white;
-}
-
-.hoverinfo {
-  position: absolute;
-  background-color: black;
-  border: 2px solid black;
-  width: 10%;
-  height: 7.7vh;
-  margin-left: 2.5%;
-  opacity: 0.6;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  display: none;
-}
-
-.img:hover+.hoverinfo {
-  display: block;
-  z-index: -1;
-}
-
-.img:hover{
-  display: block;
-}
-
-
-.testtext {
-  margin-left: 24%;
-}
-
-.testprice {
-  margin-top: 4%;
-  margin-left: 29%;
-}
-
-.testinfo {
-  margin-top: 3%;
-  margin-left: 27%;
-}
-
-.testinfotext {
-  margin-left: 24%;
-}
+/*test*/
