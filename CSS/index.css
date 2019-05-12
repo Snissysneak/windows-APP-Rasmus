@@ -111,7 +111,6 @@
   background-size:200px 100px, 0px 0px;
   background-position:0 0,50% 0;
   background-repeat:no-repeat;
-  border: 2px solid black;
 }
 
 .hoverinfo:hover {

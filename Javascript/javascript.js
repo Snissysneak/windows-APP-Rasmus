@@ -293,12 +293,3 @@ function pillowfactory() {
 }
 
 //test
-function test() {
-  var not = document.getElementsByClassName("img");
-  var not1 = -1;
-
-  for (var i = 0; i < not.length; i++) {
-    not[i].style.zIndex = not1;
-    not1 -= 1;
-  }
-}
