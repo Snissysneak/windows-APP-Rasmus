@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Waifu Clicker</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script type="text/javascript" src="Javascript/javascript.js"></script>
   </head>
   <body background="img/BG.png" onload="onstartup(), update()">
 
@@ -15,30 +14,59 @@
         <h1 class="headertext">Click Upgrades</h1>
       </div>
 
-      <a href="#" onclick="clickerboost()"><div class="subheaderslong">
-        <img class="upgradelong" src="img/clickupgrade.png" alt="#">
-        <h2 class="upgradetextlong">Clicker Boost</h2>
-        <h2 class="upgradeinfolong">Information</h2>
-        <h3 class="upgradepricelong" id="clickerboostprice"></h3>
-        <p class="upgradeinfotextlong" id="boostinfo"></p>
-      </div></a>
-      
-      <a href="#" onclick="clickupgradeone()" id="hide"><div class="subheaders">
+      <a href="#" onclick="coverupgradeone()" id="coverupgradeone"><div class="subheaders">
         <img class="upgrade" src="img/clickupgradeone.png" alt="#">
         <div class="hoverinfo">
           <h4 class="upgradetext">ClickUpgrade I</h4>
-          <h6 class="upgradeprice" id="clickerboostprice">Price: 5000 Waifu's</h3>
+          <h6 class="upgradeprice">Price: 100 Waifu's</h3>
           <h5 class="upgradeinfo">Information:</h5>
-          <h6 class="upgradeinfotext" id="boostinfo">Click +3</h6>
+          <h6 class="upgradeinfotext">Click *2 + Auto Click *2</h6>
         </div>
       </div></a>
-      <a href="#" onclick="clickupgradeone()" id="hide"><div class="subheaders">
+      <a href="#" onclick="coverupgradetwo()" id="coverupgradetwo"><div class="subheaders">
         <img class="upgrade" src="img/clickupgradeone.png" alt="#">
         <div class="hoverinfo">
-          <h4 class="upgradetext">ClickUpgrade I</h4>
-          <h6 class="upgradeprice" id="clickerboostprice">Price: 5000 Waifu's</h3>
+          <h4 class="upgradetext">ClickUpgrade II</h4>
+          <h6 class="upgradeprice">Price: 500 Waifu's</h3>
           <h5 class="upgradeinfo">Information:</h5>
-          <h6 class="upgradeinfotext" id="boostinfo">Click +3</h6>
+          <h6 class="upgradeinfotext">Click *2 + Auto Click *2</h6>
+        </div>
+      </div></a>
+      <a href="#" onclick="coverupgradethree()" id="coverupgradethree"><div class="subheaders">
+        <img class="upgrade" src="img/clickupgradeone.png" alt="#">
+        <div class="hoverinfo">
+          <h4 class="upgradetext">ClickUpgrade III</h4>
+          <h6 class="upgradeprice">Price: 10000 Waifu's</h3>
+          <h5 class="upgradeinfo">Information:</h5>
+          <h6 class="upgradeinfotext">Click *2 + Auto Click *2</h6>
+        </div>
+      </div></a>
+
+      <a href="#" onclick="pillowupgradeone()" id="pillowupgradeone"><div class="subheaders">
+        <img class="upgrade" src="img/clickupgradeone.png" alt="#">
+        <div class="hoverinfo">
+          <h4 class="upgradetext">PillowUpgrade I</h4>
+          <h6 class="upgradeprice">Price: 1000 Waifu's</h3>
+          <h5 class="upgradeinfo">Information:</h5>
+          <h6 class="upgradeinfotext">Pillow *2</h6>
+        </div>
+      </div></a>
+      <a href="#" onclick="pillowupgradetwo()" id="pillowupgradetwo"><div class="subheaders">
+        <img class="upgrade" src="img/clickupgradeone.png" alt="#">
+        <div class="hoverinfo">
+          <h4 class="upgradetext">ClickUpgrade II</h4>
+          <h6 class="upgradeprice">Price: 5000 Waifu's</h3>
+          <h5 class="upgradeinfo">Information:</h5>
+          <h6 class="upgradeinfotext">Pillow *2</h6>
+        </div>
+      </div></a>
+      <a href="#" onclick="pillowupgradethree()" id="pillowupgradethree"><div class="subheaders">
+        <img class="upgrade" src="img/clickupgradeone.png" alt="#">
+        <div class="hoverinfo">
+          <h4 class="upgradetext">ClickUpgrade III</h4>
+          <h6 class="upgradeprice">Price: 50000 Waifu's</h3>
+          <h5 class="upgradeinfo">Information:</h5>
+          <h6 class="upgradeinfotext">Pillow *2</h6>
         </div>
       </div></a>
 
@@ -106,7 +134,6 @@
         <div class="headers">
           <h1 class="headertext">Current Upgrades</h1>
         </div>
-
       </div>
     </div>
 
@@ -124,5 +151,6 @@
         });
       }
     </script>
+    <script type="text/javascript" src="Javascript/javascript.js"></script>
   </body>
 </html>

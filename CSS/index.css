@@ -93,13 +93,13 @@
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   display: none;
-  width: 9%;
+  width: 10%;
   height: 8.7vh;
   background: #920C74;
   background:
     radial-gradient(circle 20px at -1.2% 47%,transparent,transparent 50px,#920C74 50px),
     radial-gradient(circle 20px at 120% 50%,transparent,transparent 0px,#920C74 0px);
-  background-size:200px 100px, 0px 0px;
+  background-size:270px 100px, 0px 0px;
   background-position:0 0,50% 0;
   background-repeat:no-repeat;
 }
@@ -109,6 +109,7 @@
 }
 .upgradetext {
   margin-left: 27%;
+  margin-top: 2%;
 }
 .upgradeinfo {
   margin-top: 4%;
@@ -183,7 +184,7 @@
 }
 @keyframes make_bigger {
   from { width: 15%; }
-  to { width: 16%; }
+  to { width: 14%; }
 }
 
 /*Clicker Upgrades*/
@@ -197,7 +198,7 @@
   background-color: #880DFF;
   opacity: 0.9;
 }
-#hide {
+#coverupgradeone, #coverupgradetwo, #coverupgradethree, #pillowupgradeone, #pillowupgradetwo, #pillowupgradethree {
   display: none;
 }
 
