@@ -2,7 +2,7 @@
 var total = 0
 var totalclicks = 0
 var auto = 0
-var a = 1000
+var a = 1
 
 //spent
 var totalwaifuspent = 0
@@ -41,6 +41,48 @@ var factorygive = 1
 var factorygiveauto = 0
 var ownedpillowfactory = 0
 
+var pillowbankpris = 1400000
+var startpillowbankpris = 1400000
+var bankgive = 1
+var bankgiveauto = 0
+var ownedpillowbank = 0
+
+var pillowtemplepris = 20000000
+var startpillowtemplepris = 20000000
+var templegive = 1
+var templegiveauto = 0
+var ownedpillowtemple = 0
+
+var pillowtowerpris = 330000000
+var startpillowtowerpris = 330000000
+var towergive = 1
+var towergiveauto = 0
+var ownedpillowtower = 0
+
+var pillowshipmentpris = 5100000000
+var startpillowshipmentpris = 5100000000
+var shipmentgive = 1
+var shipmentgiveauto = 0
+var ownedpillowshipment = 0
+
+var pillowalchemylabpris = 75000000000
+var startpillowalchemylabpris = 75000000000
+var alchemylabgive = 1
+var alchemylabgiveauto = 0
+var ownedpillowalchemylab = 0
+
+var pillowportalpris = 1000000000000
+var startpillowportalpris = 1000000000000
+var portalgive = 1
+var portalgiveauto = 0
+var ownedpillowportal = 0
+
+var pillowtimepris = 14000000000000
+var startpillowtimepris = 14000000000000
+var timegive = 1
+var timegiveauto = 0
+var ownedpillowtime = 0
+
 //onetime upgardes
 var coverköptone = 0
 var coverköpttwo = 0
@@ -49,6 +91,18 @@ var coverköptthree = 0
 var pillowköptone = 0
 var pillowköpttwo = 0
 var pillowköptthree = 0
+
+var bodypillowköptone = 0
+var bodypillowköpttwo = 0
+var bodypillowköptthree = 0
+
+var mineköptone = 0
+var mineköpttwo = 0
+var mineköptthree = 0
+
+var factoryköptone = 0
+var factoryköpttwo = 0
+var factoryköptthree = 0
 
 //onload
 function onstartup() {
@@ -72,6 +126,27 @@ function onstartup() {
 
   document.getElementById("pillowfactoryprice").innerHTML = "Price: " + startpillowfactorypris + " Waifu's";
   document.getElementById("pillowfactoryinfo").innerHTML = "owned: " + ownedpillowfactory;
+
+  document.getElementById("pillowbankprice").innerHTML = "Price: " + startpillowbankpris + " Waifu's";
+  document.getElementById("pillowbankinfo").innerHTML = "owned: " + ownedpillowbank;
+
+  document.getElementById("pillowtempleprice").innerHTML = "Price: " + startpillowtemplepris + " Waifu's";
+  document.getElementById("pillowtempleinfo").innerHTML = "owned: " + ownedpillowtemple;
+
+  document.getElementById("pillowwizardtowerprice").innerHTML = "Price: " + startpillowtowerpris + " Waifu's";
+  document.getElementById("pillowwizardtowerinfo").innerHTML = "owned: " + ownedpillowtower;
+
+  document.getElementById("pillowshipmentprice").innerHTML = "Price: " + startpillowshipmentpris + " Waifu's";
+  document.getElementById("pillowshipmentinfo").innerHTML = "owned: " + ownedpillowshipment;
+
+  document.getElementById("pillowalchemylabprice").innerHTML = "Price: " + startpillowalchemylabpris + " Waifu's";
+  document.getElementById("pillowalchemylabinfo").innerHTML = "owned: " + ownedpillowalchemylab;
+
+  document.getElementById("pillowportalprice").innerHTML = "Price: " + startpillowportalpris + " Waifu's";
+  document.getElementById("pillowportalinfo").innerHTML = "owned: " + ownedpillowportal;
+
+  document.getElementById("pillowtimemachineprice").innerHTML = "Price: " + startpillowtimepris + " Waifu's";
+  document.getElementById("pillowtimemachineinfo").innerHTML = "owned: " + ownedpillowtime;
 }
 
 //add money system
@@ -230,12 +305,79 @@ function money() {
     }
   }
 
+  //one time bodypillow upgrades
+  if (bodypillowköptone == 0) {
+    if (ownedbodypillow >= 1) {
+      document.getElementById("bodypillowupgradeone").style.display = "block";
 
+      bodypillowköptone += 1;
+    }
+  }
+  if (bodypillowköpttwo == 0) {
+    if (ownedbodypillow >= 5) {
+      document.getElementById("bodypillowupgradetwo").style.display = "block";
+
+      bodypillowköpttwo += 1;
+    }
+  }
+  if (bodypillowköptthree == 0) {
+    if (ownedbodypillow >= 25) {
+      document.getElementById("bodypillowupgradethree").style.display = "block";
+
+      bodypillowköptthree += 1;
+    }
+  }
+
+  //one time pillowmine upgrades
+  if (mineköptone == 0) {
+    if (ownedpillowmine >= 1) {
+      document.getElementById("mineupgradeone").style.display = "block";
+
+      mineköptone += 1;
+    }
+  }
+  if (mineköpttwo == 0) {
+    if (ownedpillowmine >= 5) {
+      document.getElementById("mineupgradetwo").style.display = "block";
+
+      mineköpttwo += 1;
+    }
+  }
+  if (mineköptthree == 0) {
+    if (ownedpillowmine >= 25) {
+      document.getElementById("mineupgradethree").style.display = "block";
+
+      mineköptthree += 1;
+    }
+  }
+
+  //one time pillowfactory upgrades
+  if (factoryköptone == 0) {
+    if (ownedpillowfactory >= 1) {
+      document.getElementById("factoryupgradeone").style.display = "block";
+
+      factoryköptone += 1;
+    }
+  }
+  if (factoryköpttwo == 0) {
+    if (ownedpillowfactory >= 5) {
+      document.getElementById("factoryupgradetwo").style.display = "block";
+
+      factoryköpttwo += 1;
+    }
+  }
+  if (factoryköptthree == 0) {
+    if (ownedpillowfactory >= 25) {
+      document.getElementById("factoryupgradethree").style.display = "block";
+
+      factoryköptthree += 1;
+    }
+  }
 }
 
 //update auto clickers
 function update() {
-  total += covergiveauto + pillowgiveauto + bodypillowgiveauto + minegiveauto + factorygiveauto;
+  total += covergiveauto + pillowgiveauto + bodypillowgiveauto + minegiveauto + factorygiveauto + bankgiveauto + templegiveauto + towergiveauto + shipmentgiveauto + alchemylabgiveauto + portalgiveauto + timegiveauto;
 
   money();
 
@@ -243,7 +385,6 @@ function update() {
 }
 
 //cicker upgrades
-
 function coverupgradeone() {
   var coverupgradeone = 100;
 
@@ -324,6 +465,126 @@ function pillowupgradethree() {
   }
 }
 
+function bodypillowupgradeone() {
+  var bodypillowupgradeone = 11000;
+
+  if (total >= bodypillowupgradeone) {
+    total -= bodypillowupgradeone;
+    totalwaifuspent += bodypillowupgradeone;
+
+    minegive = minegive * 2;
+
+    document.getElementById("bodypillowupgradeone").style.display = "none";
+    onstartup();
+  }
+}
+function bodypillowupgradetwo() {
+  var bodypillowupgradetwo = 55000;
+
+  if (total >= bodypillowupgradetwo) {
+    total -= bodypillowupgradetwo;
+    totalwaifuspent += bodypillowupgradetwo;
+
+    minegive = minegive * 2;
+
+    document.getElementById("bodypillowupgradetwo").style.display = "none";
+    onstartup();
+  }
+}
+function bodypillowupgradethree() {
+  var bodypillowupgradethree = 11000;
+
+  if (total >= bodypillowupgradethree) {
+    total -= bodypillowupgradethree;
+    totalwaifuspent += bodypillowupgradethree;
+
+    minegive = minegive * 2;
+
+    document.getElementById("bodypillowupgradethree").style.display = "none";
+    onstartup();
+  }
+}
+
+function mineupgradeone() {
+  var mineupgradeone = 120000;
+
+  if (total >= mineupgradeone) {
+    total -= mineupgradeone;
+    totalwaifuspent += mineupgradeone;
+
+    minegive = minegive * 2;
+
+    document.getElementById("mineupgradeone").style.display = "none";
+    onstartup();
+  }
+}
+function mineupgradetwo() {
+  var mineupgradetwo = 600000;
+
+  if (total >= mineupgradetwo) {
+    total -= mineupgradetwo;
+    totalwaifuspent += mineupgradetwo;
+
+    minegive = minegive * 2;
+
+    document.getElementById("mineupgradetwo").style.display = "none";
+    onstartup();
+  }
+}
+function mineupgradethee() {
+  var mineupgradethree = 6000000;
+
+  if (total >= mineupgradethree) {
+    total -= mineupgradethree;
+    totalwaifuspent += mineupgradethree;
+
+    minegive = minegive * 2;
+
+    document.getElementById("mineupgradethree").style.display = "none";
+    onstartup();
+  }
+}
+
+function factoryupgradeone() {
+  var factoryupgradeone = 1300000;
+
+  if (total >= factoryupgradeone) {
+    total -= factoryupgradeone;
+    totalwaifuspent += factoryupgradeone;
+
+    factorygive = factorygive * 2;
+
+    document.getElementById("factoryupgradeone").style.display = "none";
+    onstartup();
+  }
+}
+function factoryupgradetwo() {
+  var factoryupgradetwo = 6500000;
+
+  if (total >= factoryupgradetwo) {
+    total -= factoryupgradetwo;
+    totalwaifuspent += factoryupgradetwo;
+
+    factorygive = factorygive * 2;
+
+    document.getElementById("factoryupgradetwo").style.display = "none";
+    onstartup();
+  }
+}
+function factoryupgradethree() {
+  var factoryupgradethree = 65000000;
+
+  if (total >= factoryupgradethree) {
+    total -= factoryupgradethree;
+    totalwaifuspent += factoryupgradethree;
+
+    factorygive = factorygive * 2;
+
+    document.getElementById("factoryupgradethree").style.display = "none";
+    onstartup();
+  }
+}
+
 //auto Upgrades
 function pillowcover() {
   if (total >= pillowcoverpris) {
@@ -394,6 +655,111 @@ function pillowfactory() {
 
     pillowfactorypris = 130000 * 1.15**ownedpillowfactory;
     startpillowfactorypris = pillowfactorypris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function pillowbank() {
+  if (total >= pillowbankpris) {
+    total -= pillowbankpris;
+    totalwaifuspent += pillowbankpris;
+    ownedpillowbank += 1;
+    bankgiveauto = (14 * ownedpillowbank) * bankgive;
+
+    pillowbankpris = 1400000 * 1.15**ownedpillowbank;
+    startpillowbankpris = pillowbankpris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function pillowtempel() {
+  if (total >= pillowtemplepris) {
+    total -= pillowtemplepris;
+    totalwaifuspent += pillowtemplepris;
+    ownedpillowtemple += 1;
+    templegiveauto = (78 * ownedpillowtemple) * templegive;
+
+    pillowtemplepris = 20000000 * 1.15**ownedpillowtemple;
+    startpillowtemplepris = pillowtemplepris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function pillowwizardtower() {
+  if (total >= pillowtowerpris) {
+    total -= pillowtowerpris;
+    totalwaifuspent += pillowtowerpris;
+    ownedpillowtower += 1;
+    towergiveauto = (440 * ownedpillowtower) * towergive;
+
+    pillowtowerpris = 330000000 * 1.15**ownedpillowtower;
+    startpillowtowerpris = pillowtowerpris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function pillowshipment() {
+  if (total >= pillowshipmentpris) {
+    total -= pillowshipmentpris;
+    totalwaifuspent += pillowshipmentpris;
+    ownedpillowshipment += 1;
+    shipmentgiveauto = (2600 * ownedpillowshipment) * shipmentgive;
+
+    pillowshipmentpris = 5100000000 * 1.15**ownedpillowshipment;
+    startpillowshipmentpris = pillowshipmentpris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function pillowalchemylab() {
+  if (total >= pillowalchemylabpris) {
+    total -= pillowalchemylabpris;
+    totalwaifuspent += pillowalchemylabpris;
+    ownedpillowalchemylab += 1;
+    alchemylabgiveauto = (16000 * ownedpillowalchemylab) * alchemylabgive;
+
+    pillowalchemylabpris = 75000000000 * 1.15**ownedpillowalchemylab;
+    startpillowalchemylabpris = pillowalchemylabpris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function pillowportal() {
+  if (total >= pillowportalpris) {
+    total -= pillowportalpris;
+    totalwaifuspent += pillowportalpris;
+    ownedpillowportal += 1;
+    portalgiveauto = (100000 * ownedpillowportal) * portalgive;
+
+    pillowportalpris = 1000000000000 * 1.15**ownedpillowbank;
+    startpillowportalpris = pillowportalpris.toFixed(0);
+
+    money();
+    onstartup();
+  }
+}
+
+function pillowtimemachine() {
+  if (total >= pillowtimepris) {
+    total -= pillowtimepris;
+    totalwaifuspent += pillowtimepris;
+    ownedpillowtime += 1;
+    timegiveauto = (600000 * ownedpillowtime) * timegive;
+
+    pillowtimepris = 14000000000000 * 1.15**ownedpillowtime;
+    startpillowtimepris = pillowtimepris.toFixed(0);
 
     money();
     onstartup();
