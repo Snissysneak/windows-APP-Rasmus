@@ -2,7 +2,7 @@
 var total = 0
 var totalclicks = 0
 var auto = 0
-var a = 10000
+var a = 1
 
 //spent
 var totalwaifuspent = 0
