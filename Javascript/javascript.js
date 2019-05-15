@@ -2,7 +2,7 @@
 var total = 0
 var totalclicks = 0
 var auto = 0
-var a = 1
+var a = 10000
 
 //spent
 var totalwaifuspent = 0
@@ -452,7 +452,7 @@ function pillowupgradetwo() {
   }
 }
 function pillowupgradethree() {
-  var pillowupgradethree = 50000;
+    var pillowupgradethree = 50000;
 
   if (total >= pillowupgradethree) {
     total -= pillowupgradethree;
@@ -531,7 +531,7 @@ function mineupgradetwo() {
     onstartup();
   }
 }
-function mineupgradethee() {
+function mineupgradethree() {
   var mineupgradethree = 6000000;
 
   if (total >= mineupgradethree) {
@@ -621,7 +621,7 @@ function bodypillow() {
     total -= bodypillowpris;
     totalwaifuspent += bodypillowpris;
     ownedbodypillow += 1;
-    bodypillowgiveauto = (0.08 * ownedcover) * bodypillowgive;
+    bodypillowgiveauto = (0.08 * ownedbodypillow) * bodypillowgive;
 
     bodypillowpris = 1100 * 1.15**ownedbodypillow;
     startbodypillowpris = bodypillowpris.toFixed(0);
@@ -676,7 +676,7 @@ function pillowbank() {
   }
 }
 
-function pillowtempel() {
+function pillowtemple() {
   if (total >= pillowtemplepris) {
     total -= pillowtemplepris;
     totalwaifuspent += pillowtemplepris;
