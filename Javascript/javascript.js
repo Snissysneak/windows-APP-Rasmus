@@ -1,108 +1,108 @@
 //money & clicks
-var total = 0
-var totalclicks = 0
-var auto = 0
-var a = 1
+var total = 0;
+var totalclicks = 0;
+var auto = 0;
+var a = 1;
 
 //spent
-var totalwaifuspent = 0
+var totalwaifuspent = 0;
 
 //clicker Upgrades
-var boostprice = 100
+var boostprice = 100;
 
 //auto Upgrades
-var pillowcoverpris = 15
-var coverpris = 15
-var covergive = 1
-var covergiveauto = 0
-var ownedcover = 0
+var pillowcoverpris = 15;
+var coverpris = 15;
+var covergive = 1;
+var covergiveauto = 0;
+var ownedcover = 0;
 
-var pillowpris = 100
-var startpillowpris = 100
-var pillowgive = 1
-var pillowgiveauto = 0
-var ownedpillow = 0
+var pillowpris = 100;
+var startpillowpris = 100;
+var pillowgive = 1;
+var pillowgiveauto = 0;
+var ownedpillow = 0;
 
-var bodypillowpris = 1100
-var startbodypillowpris = 1100
-var bodypillowgive = 1
-var bodypillowgiveauto = 0
-var ownedbodypillow = 0
+var bodypillowpris = 1100;
+var startbodypillowpris = 1100;
+var bodypillowgive = 1;
+var bodypillowgiveauto = 0;
+var ownedbodypillow = 0;
 
-var pillowminepris = 12000
-var startpillowminepris = 12000
-var minegive = 1
-var minegiveauto = 0
-var ownedpillowmine = 0
+var pillowminepris = 12000;
+var startpillowminepris = 12000;
+var minegive = 1;
+var minegiveauto = 0;
+var ownedpillowmine = 0;
 
-var pillowfactorypris = 130000
-var startpillowfactorypris = 130000
-var factorygive = 1
-var factorygiveauto = 0
-var ownedpillowfactory = 0
+var pillowfactorypris = 130000;
+var startpillowfactorypris = 130000;
+var factorygive = 1;
+var factorygiveauto = 0;
+var ownedpillowfactory = 0;
 
-var pillowbankpris = 1400000
-var startpillowbankpris = 1400000
-var bankgive = 1
-var bankgiveauto = 0
-var ownedpillowbank = 0
+var pillowbankpris = 1400000;
+var startpillowbankpris = 1400000;
+var bankgive = 1;
+var bankgiveauto = 0;
+var ownedpillowbank = 0;
 
-var pillowtemplepris = 20000000
-var startpillowtemplepris = 20000000
-var templegive = 1
-var templegiveauto = 0
-var ownedpillowtemple = 0
+var pillowtemplepris = 20000000;
+var startpillowtemplepris = 20000000;
+var templegive = 1;
+var templegiveauto = 0;
+var ownedpillowtemple = 0;
 
-var pillowtowerpris = 330000000
-var startpillowtowerpris = 330000000
-var towergive = 1
-var towergiveauto = 0
-var ownedpillowtower = 0
+var pillowtowerpris = 330000000;
+var startpillowtowerpris = 330000000;
+var towergive = 1;
+var towergiveauto = 0;
+var ownedpillowtower = 0;
 
-var pillowshipmentpris = 5100000000
-var startpillowshipmentpris = 5100000000
-var shipmentgive = 1
-var shipmentgiveauto = 0
-var ownedpillowshipment = 0
+var pillowshipmentpris = 5100000000;
+var startpillowshipmentpris = 5100000000;
+var shipmentgive = 1;
+var shipmentgiveauto = 0;
+var ownedpillowshipment = 0;
 
-var pillowalchemylabpris = 75000000000
-var startpillowalchemylabpris = 75000000000
-var alchemylabgive = 1
-var alchemylabgiveauto = 0
-var ownedpillowalchemylab = 0
+var pillowalchemylabpris = 75000000000;
+var startpillowalchemylabpris = 75000000000;
+var alchemylabgive = 1;
+var alchemylabgiveauto = 0;
+var ownedpillowalchemylab = 0;
 
-var pillowportalpris = 1000000000000
-var startpillowportalpris = 1000000000000
-var portalgive = 1
-var portalgiveauto = 0
-var ownedpillowportal = 0
+var pillowportalpris = 1000000000000;
+var startpillowportalpris = 1000000000000;
+var portalgive = 1;
+var portalgiveauto = 0;
+var ownedpillowportal = 0;
 
-var pillowtimepris = 14000000000000
-var startpillowtimepris = 14000000000000
-var timegive = 1
-var timegiveauto = 0
-var ownedpillowtime = 0
+var pillowtimepris = 14000000000000;
+var startpillowtimepris = 14000000000000;
+var timegive = 1;
+var timegiveauto = 0;
+var ownedpillowtime = 0;
 
 //onetime upgardes
-var coverköptone = 0
-var coverköpttwo = 0
-var coverköptthree = 0
+var coverköptone = 0;
+var coverköpttwo = 0;
+var coverköptthree = 0;
 
-var pillowköptone = 0
-var pillowköpttwo = 0
-var pillowköptthree = 0
+var pillowköptone = 0;
+var pillowköpttwo = 0;
+var pillowköptthree = 0;
 
-var bodypillowköptone = 0
-var bodypillowköpttwo = 0
-var bodypillowköptthree = 0
+var bodypillowköptone = 0;
+var bodypillowköpttwo = 0;
+var bodypillowköptthree = 0;
 
-var mineköptone = 0
-var mineköpttwo = 0
-var mineköptthree = 0
+var mineköptone = 0;
+var mineköpttwo = 0;
+var mineköptthree = 0;
 
-var factoryköptone = 0
-var factoryköpttwo = 0
-var factoryköptthree = 0
+var factoryköptone = 0;
+var factoryköpttwo = 0;
+var factoryköptthree = 0;
 
 //onload
 function onstartup() {
@@ -151,20 +151,20 @@ function onstartup() {
 
 //add money system
 function add() {
-  var totalK
-  var totalM
-  var totalB
-  var totalT
-  var totalQa
-  var totalQi
-  var totalSx
-  var totalSp
-  var totalOc
-  var totalNo
-  var totalDc
+  var totalK;
+  var totalM;
+  var totalB;
+  var totalT;
+  var totalQa;
+  var totalQi;
+  var totalSx;
+  var totalSp;
+  var totalOc;
+  var totalNo;
+  var totalDc;
 
-  total = total + a
-  totalclicks = totalclicks + 1
+  total = total + a;
+  totalclicks = totalclicks + 1;
   money();
 
   document.getElementById("clicks").value = totalclicks + " Clicks";
@@ -177,84 +177,84 @@ function add() {
 
 function money() {
   if (total < 1000) {
-    num = total.toFixed(0)
+    num = total.toFixed(0);
 
     document.getElementById("score").value = num + " Waifu's";
   }
 
   else if (total >= 10**3 && total < 10**6) {
-    num = total / 10**3
-    totalK = num.toFixed(2)
+    num = total / 10**3;
+    totalK = num.toFixed(2);
 
     document.getElementById("score").value = totalK + "K" + " Waifu's";
   }
 
   else if (total >= 10**6 && total < 10**9) {
-    num = total / 10**6
-    totalM = num.toFixed(2)
+    num = total / 10**6;
+    totalM = num.toFixed(2);
 
     document.getElementById("score").value = totalM + "M" + " Waifu's";
   }
 
   else if (total >= 10**9 && total < 10**12) {
-    num = total / 10**9
-    totalB = num.toFixed(2)
+    num = total / 10**9;
+    totalB = num.toFixed(2);
 
     document.getElementById("score").value = totalB + "B" + " Waifu's";
   }
 
   else if (total >= 10**12 && total < 10**15) {
-    num = total / 10**12
-    totalT = num.toFixed(2)
+    num = total / 10**12;
+    totalT = num.toFixed(2);
 
     document.getElementById("score").value = totalT + "T" + " Waifu's";
   }
 
   else if (total >= 10**15 && total < 10**18) {
-    num = total / 10**15
-    totalQa = num.toFixed(2)
+    num = total / 10**15;
+    totalQa = num.toFixed(2);
 
     document.getElementById("score").value = totalQa + "Qa" + " Waifu's";
   }
 
   else if (total >= 10**18 && total < 10**21) {
-    num = total / 10**18
-    totalQi = num.toFixed(2)
+    num = total / 10**18;
+    totalQi = num.toFixed(2);
 
     document.getElementById("score").value = totalQi + "Qi" + " Waifu's";
   }
 
   else if (total >= 10**21 && total < 10**24) {
-    num = total / 10**21
-    totalSx = num.toFixed(2)
+    num = total / 10**21;
+    totalSx = num.toFixed(2);
 
     document.getElementById("score").value = totalSx + "Sx" + " Waifu's";
   }
 
   else if (total >= 10**24 && total < 10**27) {
-    num = total / 10**24
-    totalSp = num.toFixed(2)
+    num = total / 10**24;
+    totalSp = num.toFixed(2);
 
     document.getElementById("score").value = totalSp + "Sp" + " Waifu's";
   }
 
   else if (total >= 10**27 && total < 10**30) {
-    numc = total / 10**27
-    totalOc = num.toFixed(2)
+    numc = total / 10**27;
+    totalOc = num.toFixed(2);
 
     document.getElementById("score").value = totalOc + "Oc" + " Waifu's";
   }
 
   else if (total >= 10**30 && total < 10**33) {
-    num = total / 10**30
-    totalNo = num.toFixed(2)
+    num = total / 10**30;
+    totalNo = num.toFixed(2);
 
     document.getElementById("score").value = totalNo + "No" + " Waifu's";
   }
 
   else if (total >= 10**33) {
-    num = total / 10**33
-    totalDc = num.toFixed(2)
+    num = total / 10**33;
+    totalDc = num.toFixed(2);
 
     document.getElementById("score").value = totalDc + "Dc" + " Waifu's";
   }
@@ -271,14 +271,14 @@ function money() {
     if (ownedcover >= 1) {
       document.getElementById("coverupgradetwo").style.display = "block";
 
-      coverköpttwo += 1
+      coverköpttwo += 1;
     }
   }
   if (coverköptthree == 0) {
     if (ownedcover >= 10) {
       document.getElementById("coverupgradethree").style.display = "block";
 
-      coverköptthree += 1
+      coverköptthree += 1;
     }
   }
 
@@ -294,14 +294,14 @@ function money() {
     if (ownedpillow >= 5) {
       document.getElementById("pillowupgradetwo").style.display = "block";
 
-      pillowköpttwo += 1
+      pillowköpttwo += 1;
     }
   }
   if (pillowköptthree == 0) {
     if (ownedpillow >= 25) {
       document.getElementById("pillowupgradethree").style.display = "block";
 
-      pillowköptthree += 1
+      pillowköptthree += 1;
     }
   }
 
